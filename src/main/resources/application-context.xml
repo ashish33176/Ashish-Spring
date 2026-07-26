@@ -17,6 +17,55 @@
      <property name="gender" value="male"/>
      <property name="salary" value="100091"/>
      <property name="address" ref="add1"/>
+     <property name="list">
+           <list>
+              <value>22</value>
+              <value>212</value>
+              <value>212</value>
+              <value>2542</value>
+              <value>65</value>
+              <value>22</value>
+              <value>12</value>
+              <value>2</value>
+           
+           
+           
+           
+           </list>
+     </property>
+     
+     <property name="set">
+     
+         <set>
+            <value>23</value>
+            <value>221</value>
+            <value>23</value>
+            <value>54</value>
+            <value>76</value>
+            <value>88</value>
+            <value>9</value> 
+         
+         
+         </set>   
+     </property>
+     
+     <property name="map">
+            <map>
+              <entry key="957593" value="Nakul"/>
+              <entry key="957593" value="Mukul"/>
+              <entry key="657593" value="Akash"/>
+              <entry key="857593" value="Prakash"/>
+              <entry key="987593" value="Sakti"/>
+            
+            
+            
+            
+            </map>
+     
+     
+     
+     </property>
+     
     </bean>
     
     
@@ -27,13 +76,61 @@
 
 
 
-    <bean name="emp2" class ="com.learning.model.Employee">
+     <bean name="emp2" class ="com.learning.model.Employee">
       <constructor-arg name="id" value="112"/>
       <constructor-arg name="name" value="Sarita"/>
       <constructor-arg name="gender" value="female"/>
       <constructor-arg name="salary" value="100091"/>
       <constructor-arg name="address" ref="add2"/>
+        <constructor-arg name="list">
+           <list>
+              <value>22</value>
+              <value>212</value>
+              <value>212</value>
+              <value>2542</value>
+              <value>65</value>
+              <value>22</value>
+              <value>12</value>
+              <value>2</value>
+           
+           
+           
+           
+           </list>
+     </constructor-arg>
+     
+     <constructor-arg name="set">
+     
+         <set>
+            <value>23</value>
+            <value>221</value>
+            <value>23</value>
+            <value>54</value>
+            <value>76</value>
+            <value>88</value>
+            <value>9</value> 
+         
+         
+         </set>   
+     </constructor-arg>
+     
+     <constructor-arg name="map">
+            <map>
+              <entry key="957593" value="Nakul"/>
+              <entry key="957593" value="Mukul"/>
+              <entry key="657593" value="Akash"/>
+              <entry key="857593" value="Prakash"/>
+              <entry key="987593" value="Sakti"/>
+            
+            
+            
+            
+            </map>
+     
+     
+     
+     </constructor-arg>
      </bean>
-
+ 
 
 </beans>
