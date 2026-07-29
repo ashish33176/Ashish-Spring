@@ -9,20 +9,23 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-	ApplicationContext ioc = new ClassPathXmlApplicationContext("application-context.xml");	
+	ApplicationContext ioc = new ClassPathXmlApplicationContext("inner-bean.xml");
+	
 	System.out.println("<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>");	
 		
-   Employee bean = ioc.getBean("emp2",Employee.class);
+   Employee bean = ioc.getBean("emp1",Employee.class);
    System.out.println(bean);
    
    
    
-   
-   
-    
-    
-    
-    
 	}
 
-}
+	}
+   
+   
+   
+    
+    
+    
+    
+	

@@ -6,12 +6,12 @@
 
     <!-- bean definitions here -->
     
-    <bean name="add1" class="com.learning.model.Address" primary="true">
+    <bean name="add1" class="com.learning.model.Address">
        <property name="city" value="GZB"/>
        <property name="state" value="UP"/> 
     </bean>
 
-    <bean name="emp1" class ="com.learning.model.Employee" autowire="byType" >
+    <bean name="emp1" class ="com.learning.model.Employee" autowire="byType" scope="prototype">
      <property name="id" value="111"/>
      <property name="name" value="Vishal"/>
      <property name="gender" value="male"/>
@@ -19,21 +19,5 @@
     </bean>
     
     
-    <bean name="add2" class="com.learning.model.Address">
-       <constructor-arg name="city" value="Gurgaon"/>
-       <constructor-arg name="state" value="HR"/> 
-    </bean>
-
-
-
-   <bean name="emp2" class ="com.learning.model.Employee" autowire="constructor">
-      <constructor-arg name="id" value="112"/>
-      <constructor-arg name="name" value="Sarita"/>
-      <constructor-arg name="gender" value="female"/>
-      <constructor-arg name="salary" value="100091"/>
-                      
-     </bean>
-     
-  
-
+   
 </beans>

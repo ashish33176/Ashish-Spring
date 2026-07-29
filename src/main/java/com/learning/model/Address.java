@@ -1,19 +1,14 @@
 package com.learning.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
-
-
 public class Address {
+
+	private String city, state;
 	
 	
-	private String city,state;
 	
-	
+
 	public Address(String city, String state) {
-		super();	
+		super();
 		this.city = city;
 		this.state = state;
 		System.out.println("Address.Address(2)");
@@ -21,7 +16,6 @@ public class Address {
 
 
 	public Address() {
-		super();
 		System.out.println("Address.Address()");
 	}
 
@@ -38,12 +32,12 @@ public class Address {
 
 
 	public String getState() {
-		System.out.println("Address.setState()");
 		return state;
 	}
 
 
 	public void setState(String state) {
+		System.out.println("Address.setState()");
 		this.state = state;
 	}
 
@@ -52,6 +46,6 @@ public class Address {
 	public String toString() {
 		return "Address [city=" + city + ", state=" + state + "]";
 	}
-	
 
+	
 }
