@@ -1,21 +1,24 @@
 package com.learning.model;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 
-
-
-
-
+@Data
+@Component
 public class Employee {
 	
-	private int id;
-	private String name,gender;
-	private int salary;
+	private int id = 1;
+	private String name = "Vishal",gender = "male";
+	private int salary = 44;
 	
-	private Address address;
+	
+	@Autowired
+	private Address address;  
 	
 	public Employee() {
 		
@@ -26,7 +29,13 @@ public class Employee {
 	
 	public void setName(String name) {
 		this.name = name;
-		System.out.println("Employee.Employee()");
+		System.out.println("Employee.setName()");
+	}
+	
+	
+	public void setAddress(Address address) {
+		this.address = address;
+		System.out.println("Employee.setAddress()");
 	}
 
 
@@ -90,11 +99,6 @@ public class Employee {
 
 
 
-	public void setAddress(Address address) {
-		System.out.println("Employee.setAddress()");
-		this.address = address;
-		
-	}
 
 
 
