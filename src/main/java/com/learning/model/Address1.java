@@ -1,5 +1,6 @@
 package com.learning.model;
 
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 import lombok.AllArgsConstructor;
@@ -10,7 +11,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Component
-public class Address {
+//@Primary
+public class Address1 implements AddInterface{
 
 	private String city = "Noida", state = "UP";
 	

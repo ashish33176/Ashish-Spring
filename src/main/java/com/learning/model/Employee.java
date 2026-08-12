@@ -1,6 +1,7 @@
 package com.learning.model;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import lombok.AllArgsConstructor;
@@ -18,7 +19,8 @@ public class Employee {
 	
 	
 	@Autowired
-	private Address address;  
+	@Qualifier(value = "address1")
+	private AddInterface add;  
 	
 	public Employee() {
 		
@@ -33,20 +35,20 @@ public class Employee {
 	}
 	
 	
-	public void setAddress(Address address) {
-		this.address = address;
+	public void setAddress(AddInterface add) {
+		this.add = add;
 		System.out.println("Employee.setAddress()");
 	}
 
 
 
-	public Employee(int id, String name, String gender, int salary, Address address) {
+	public Employee(int id, String name, String gender, int salary, AddInterface add) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.gender = gender;
 		this.salary = salary;
-		this.address = address;
+		this.add = add;
 		System.out.println("Employee.Employee(5)");
 	}
 
@@ -93,8 +95,8 @@ public class Employee {
 
 
 
-	public Address getAddress() {
-		return address;
+	public AddInterface getAddress() {
+		return add;
 	}
 
 
@@ -110,8 +112,8 @@ public class Employee {
 
 	@Override
 	public String toString() {
-		return "Employee [id=" + id + ", name=" + name + ", gender=" + gender + ", salary=" + salary + ", address="
-				+ address + "]";
+		return "Employee [id=" + id + ", name=" + name + ", gender=" + gender + ", salary=" + salary + ", add="
+				+ add + "]";
 	}
 
 
